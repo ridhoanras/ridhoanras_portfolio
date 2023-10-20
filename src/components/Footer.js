@@ -19,7 +19,7 @@ const Footer = ({ big, medium }) => (
   <FooterWrapper {...big && { big }} {...medium && { medium }}>
     <Content>
       <Copyright white align="center">
-        © Name Surname 2019. All rights reserved.
+        © Ridho Anras 2023. All rights reserved.
       </Copyright>
     </Content>
   </FooterWrapper>
