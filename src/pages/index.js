@@ -217,13 +217,15 @@ class Homepage extends React.Component {
             </BlockContent>
           </Block>          
           <WorkWithMe>
-            <t.H1 green>Get in touch with me</t.H1>
+            <t.H1 green>Hubungi saya</t.H1>
             <t.LargeP>
-              Fancy working with me? Skill me for more info!{' '}
+              Berkomunikasi dengan saya untuk informasi lebih lanjut{' '}
             </t.LargeP>
-            <Skill onClick={this.openSkillPopup} book>
-              Skill
-            </Skill>
+            <LinkButton primary bold className="link" as="a"
+              target="_blank"
+              href="https://wa.me/628987898831">
+                <t.H4 green>Beralih ke Whatsapp</t.H4>              
+            </LinkButton>
           </WorkWithMe>
         </Layout>
         <SkillPopup open={openSkillPopup} handleClose={this.handleRequestDemoClose} />
