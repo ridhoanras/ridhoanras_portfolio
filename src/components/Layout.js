@@ -21,7 +21,7 @@ const Layout = ({
   theme,
   bigFooter,
   mediumFooter,
-  openContactPopup
+  openSkillPopup
   
 }) => (
   <StaticQuery
@@ -50,12 +50,12 @@ const Layout = ({
         >
           <html lang="en" />
         </Helmet>
-        <Header theme={theme} openContactPopup={openContactPopup} />
+        <Header theme={theme} openSkillPopup={openSkillPopup} />
         <LayoutWrapper>{children}</LayoutWrapper>
         <Footer
           big={bigFooter}
           medium={mediumFooter}
-          openContactPopup={openContactPopup}
+          openSkillPopup={openSkillPopup}
         />
       </>
     )}

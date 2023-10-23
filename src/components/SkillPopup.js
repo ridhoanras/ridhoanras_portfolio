@@ -8,7 +8,7 @@ import Close from '../images/close-popup-grey.png';
 import { media } from '../MediaQueries';
 import Helmet from 'react-helmet';
 
-const HireMePopupWrapper = styled.div`
+const SkillPopupWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -72,7 +72,7 @@ const Burger = styled.div`
   }
 `;
 
-class HireMePopup extends React.Component {
+class SkillPopup extends React.Component {
   closePopup = e => {
     this.props.handleClose(false);
   };
@@ -81,7 +81,7 @@ class HireMePopup extends React.Component {
     const { open } = this.props;
     const overflow = open ? 'hidden' : 'auto';
     return (
-      <HireMePopupWrapper open={open}>
+      <SkillPopupWrapper open={open}>
         <Helmet>
           <body style={{ overflow: overflow }} />
         </Helmet>
@@ -96,9 +96,9 @@ class HireMePopup extends React.Component {
             <img src={LN} alt="Your Linkedin profile" />
           </Link>
         </ContentWrapper>
-      </HireMePopupWrapper>
+      </SkillPopupWrapper>
     );
   }
 }
 
-export default HireMePopup;
+export default SkillPopup;

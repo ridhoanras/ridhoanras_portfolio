@@ -3,9 +3,11 @@ import styled from 'styled-components';
 import * as Mixins from '../Mixins';
 import * as t from '../Typography';
 import Layout, { Content } from '../components/Layout';
-import Placeholder from '../images/placeholder.png';
-import { HireMe, LinkButton } from '../components/Button.js';
-import HireMePopup from '../components/HireMePopup.js';
+import Sertifikat1 from '../images/sertifikat1.png';
+import Sertifikat2 from '../images/sertifikat2.png';
+import Sertifikat3 from '../images/sertifikat3.png';
+import { Skill, LinkButton } from '../components/Button.js';
+import SkillPopup from '../components/SkillPopup.js';
 import { media } from '../MediaQueries';
 import Colors from '../Colors';
 import Img from 'gatsby-image';
@@ -122,27 +124,27 @@ const WorkWithMe = styled.div`
 
 class Homepage extends React.Component {
   state = {
-    openHireMePopup: false
+    openSkillPopup: false
   };
 
   handleRequestDemoClose = () => {
     this.setState({
-      openHireMePopup: false
+      openSkillPopup: false
     });
   };
 
-  openContactPopup = () => {
+  openSkillPopup = () => {
     this.setState({
-      openHireMePopup: true
+      openSkillPopup: true
     });
   };
 
   render() {
-    const { openHireMePopup } = this.state;
+    const { openSkillPopup } = this.state;
     const { data } = this.props;
     return (
       <HomepageWrapper>
-        <Layout theme="white" bigFooter openContactPopup={this.openContactPopup}>
+        <Layout theme="white" bigFooter openSkillPopup={this.openSkillPopup}>
           <AboveFold>
             <Img fluid={data.avatarHomepage.childImageSharp.fluid} alt="Ridho Anras" className="avatar" />
             <t.H1 primary align="center">
@@ -151,34 +153,31 @@ class Homepage extends React.Component {
             <t.LargeP align="center" max45>
             Administrator | Trainer | Computer Science Learner 
             </t.LargeP>
-            <HireMe large onClick={this.openContactPopup} book>
-              Hire me
-            </HireMe>
+            <Skill large onClick={this.openSkillPopup} book>
+              Skill
+            </Skill>
           </AboveFold>
           <Content>
-            <t.H2 primary align="center" bold>
-              Lorem ipsum
-            </t.H2>
-            <t.P align="center" max70 className="who-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </t.P>
+            <t.H3 primary align="center" bold>
+              Assalamu'alaikum Warahmatullahi Wabarakatu. Selamat datang dihalaman saya yang mempresentasikan pengalaman, informasi, dan akivitas lainnya.
+            </t.H3>
             <t.H2 primary align="center" bold className="portfolio">
-              Portfolio
+              Sertifikat
             </t.H2>
           </Content>
           <Block>
             <BlockContent>
               <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
+                <img src={Sertifikat1} alt="Your Linkedin profile" />
               </DivWrapper>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
+                <t.H2 bold>Google for Education Training Series</t.H2>
+                <t.P>23 Februari - 15 April 2021</t.P>
+                <t.P>Google Inc</t.P>
                 <LinkButton primary bold className="link" as="a"
                   target="_blank"
-                  href="#">
-                  Lorem ipsum
+                  href="https://edu-google-com.translate.goog/get-started/professional-development/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=tc">
+                  Telusuri informasi
                 </LinkButton>
               </DivWrapper>
             </BlockContent>
@@ -186,33 +185,16 @@ class Homepage extends React.Component {
           <Block>
             <BlockContent>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
+                <img src={Sertifikat2} alt="Your Linkedin profile" />
+              </DivWrapper>
+              <DivWrapper>
+                <t.H2 bold>Network Automation Berbasis Web dengan Django</t.H2>
+                <t.P>6 Oktober 2019</t.P>
+                <t.P>Udemy</t.P>
                 <LinkButton primary bold className="link" as="a"
                   target="_blank"
-                  href="#">
-                  Lorem ipsum
-                </LinkButton>
-              </DivWrapper>
-              <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
-              </DivWrapper>
-            </BlockContent>
-          </Block>
-          <Block>
-            <BlockContent>
-              <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
-              </DivWrapper>
-              <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
-                  target="_blank"
-                  href="#">
-                  Lorem ipsum
+                  href="https://www.udemy.com/course/belajar-network-automation-berbasis-web-dengan-django/learn/lecture/14052369?start=0#content">
+                  Telusuri informasi
                 </LinkButton>
               </DivWrapper>
             </BlockContent>
@@ -220,31 +202,31 @@ class Homepage extends React.Component {
           <Block>
             <BlockContent>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
-                  target="_blank"
-                  href="#">
-                  Lorem ipsum
-                </LinkButton>
+                <img src={Sertifikat3} alt="Your Linkedin profile" />
               </DivWrapper>
               <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
+                <t.H2 bold>Teknologi Fiber Optik Sebagai Backbone Utama Internet</t.H2>
+                <t.P>22 Juni 2020</t.P>
+                <t.P>Politeknik Caltex Riau</t.P>
+                <LinkButton primary bold className="link" as="a"
+                  target="_blank"
+                  href="https://opac.lib.pcr.ac.id/index.php?p=show_detail&id=5154&keywords=">
+                  Telusuri informasi
+                </LinkButton>
               </DivWrapper>
             </BlockContent>
-          </Block>
+          </Block>          
           <WorkWithMe>
             <t.H1 green>Get in touch with me</t.H1>
             <t.LargeP>
-              Fancy working with me? Contact me for more info!{' '}
+              Fancy working with me? Skill me for more info!{' '}
             </t.LargeP>
-            <HireMe onClick={this.openContactPopup} book>
-              Contact me
-            </HireMe>
+            <Skill onClick={this.openSkillPopup} book>
+              Skill
+            </Skill>
           </WorkWithMe>
         </Layout>
-        <HireMePopup open={openHireMePopup} handleClose={this.handleRequestDemoClose} />
+        <SkillPopup open={openSkillPopup} handleClose={this.handleRequestDemoClose} />
       </HomepageWrapper>
     );
   }

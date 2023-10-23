@@ -32,7 +32,7 @@ export const Button = styled(Link)`
   }
 `;
 
-export const HireMe = styled.div`
+export const Skill = styled.div`
   line-height: 1.05;
   font-size: ${props => (props.large ? '18px' : '16px')};
   padding: ${props => (props.large ? '16px 50px' : '12px 30px')};

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import * as Mixins from '../Mixins';
 import * as t from '../Typography';
 import Layout, { Content } from '../components/Layout';
-import HireMePopup from '../components/HireMePopup.js';
+import SkillPopup from '../components/SkillPopup.js';
 import { media } from '../MediaQueries';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
@@ -61,23 +61,23 @@ const AboutMeWrapper = styled.div`
 
 class AboutMe extends React.Component {
   state = {
-    openHireMePopup: false
+    openSkillPopup: false
   };
 
   handleRequestDemoClose = () => {
     this.setState({
-      openHireMePopup: false
+      openSkillPopup: false
     });
   };
 
   openContactPopup = () => {
     this.setState({
-      openHireMePopup: true
+      openSkillPopup: true
     });
   };
 
   render() {
-    const { openHireMePopup } = this.state;
+    const { openSkillPopup } = this.state;
     const { data } = this.props;
     return (
       <AboutMeWrapper>
@@ -94,7 +94,7 @@ class AboutMe extends React.Component {
             <Img fluid={data.avatarAbout.childImageSharp.fluid} alt="Ridho Anras" className="avatar" />
           </Content>
         </Layout>
-        <HireMePopup open={openHireMePopup} handleClose={this.handleRequestDemoClose} />
+        <SkillPopup open={openSkillPopup} handleClose={this.handleRequestDemoClose} />
       </AboutMeWrapper>
     );
   }

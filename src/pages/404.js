@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import * as Mixins from '../Mixins';
 import * as t from '../Typography';
 import Layout from '../components/Layout';
-import HireMePopup from '../components/HireMePopup.js';
+import SkillPopup from '../components/SkillPopup.js';
 
 const AboveFold = styled.div`
   ${Mixins.aboveFoldMixin}
@@ -22,26 +22,26 @@ const NotFoundPageWrapper = styled.div`
 
 class NotFoundPage extends React.Component {
   state = {
-    openHireMePopup: false
+    openSkillPopup: false
   };
 
-  closeContactPopup = () => {
+  closeSkillPopup = () => {
     this.setState({
-      openHireMePopup: false
+      openSkillPopup: false
     });
   };
 
-  openContactPopup = () => {
+  openSkillPopup = () => {
     this.setState({
-      openHireMePopup: true
+      openSkillPopup: true
     });
   };
 
   render() {
-    const { openHireMePopup } = this.state;
+    const { openSkillPopup } = this.state;
     return (
       <NotFoundPageWrapper>
-        <Layout theme="white" openContactPopup={this.openContactPopup}>
+        <Layout theme="white" openSkillPopup={this.openSkillPopup}>
           <AboveFold>
             <t.H1 green align="center">
               404
@@ -51,9 +51,9 @@ class NotFoundPage extends React.Component {
             </t.H3>
           </AboveFold>
         </Layout>
-        <HireMePopup
-          open={openHireMePopup}
-          handleClose={this.closeContactPopup}
+        <SkillPopup
+          open={openSkillPopup}
+          handleClose={this.closeSkillPopup}
         />
       </NotFoundPageWrapper>
     );

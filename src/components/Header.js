@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, HireMe } from './Button.js';
+import { Button, Skill, } from './Button.js';
 import Close from '../images/close-popup.png';
 import styled from 'styled-components';
 import Colors from '../Colors';
@@ -52,7 +52,7 @@ const HeaderWrapper = styled.div`
       }
     `}
   }
-  ${HireMe} {
+  ${Skill} {
     margin-left: 20px;
     ${media.desktop`
       margin: 30px 0 0 0;
@@ -199,8 +199,8 @@ class Header extends React.Component {
     }
   };
 
-  openContactPopup = () => {
-    this.props.openContactPopup();
+  openSkillPopup = () => {
+    this.props.openSkillPopup();
   };
 
   render() {
@@ -258,9 +258,9 @@ class Header extends React.Component {
                 </Button>
               </li>
               <li>
-                <HireMe theme={theme} onClick={this.openContactPopup} book>
-                  Contact me
-                </HireMe>
+                <Skill theme={theme} onClick={this.openSkillPopup} book>
+                  Skill
+                </Skill>
               </li>
             </MenuList>
           </HeaderNav>
