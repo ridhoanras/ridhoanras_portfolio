@@ -159,7 +159,7 @@ class Homepage extends React.Component {
           </AboveFold>
           <Content>
             <t.H3 primary align="center" bold>
-              Assalamu'alaikum Warahmatullahi Wabarakatu. Selamat datang dihalaman saya yang mempresentasikan pengalaman, informasi, dan akivitas lainnya.
+              Assalamu'alaikum Warahmatullahi Wabarakatuh. Selamat datang di halaman saya yang mempresentasikan pengalaman, informasi, dan akivitas lainnya.
             </t.H3>
             <t.H2 primary align="center" bold className="portfolio">
               Sertifikat

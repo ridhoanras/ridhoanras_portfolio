@@ -258,9 +258,12 @@ class Header extends React.Component {
                 </Button>
               </li>
               <li>
-                <Skill theme={theme} onClick={this.openSkillPopup} book>
-                  Skill
-                </Skill>
+              <Button
+                  theme={theme}
+                  to="aktivitas"
+                >
+                  Aktivitas
+              </Button>
               </li>
             </MenuList>
           </HeaderNav>
